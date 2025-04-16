@@ -1,2 +1,3 @@
 import streamlit as st
-st.write('Initialisierung...')
+st.title("Initialisierung")
+st.write("Diese Seite wird zur Initialisierung verwendet.")
