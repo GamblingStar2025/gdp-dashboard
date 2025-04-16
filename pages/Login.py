@@ -1,14 +1,10 @@
+
 import streamlit as st
 
-st.title("🔐 Login / Registrierung")
+st.set_page_config(page_title="Login", layout="centered")
+st.title("🔐 Login")
 
-email = st.text_input("Email-Adresse")
-password = st.text_input("Passwort", type="password")
-
-if st.button("✅ Einloggen"):
-    if email:
-        st.session_state["email"] = email
-        st.success(f"Erfolgreich eingeloggt als {email}")
-        st.page_link("pages/MainApp.py", label="➡️ Weiter zur App")
-    else:
-        st.error("Bitte Email eingeben.")
+email = st.text_input("E-Mail")
+if st.button("Login"):
+    st.session_state["email"] = email
+    st.success("Erfolgreich eingeloggt")
