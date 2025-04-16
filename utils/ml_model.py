@@ -1,0 +1,1 @@
+# Basismodell für KI-Vorhersage
