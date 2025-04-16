@@ -1,7 +1,10 @@
-
 import streamlit as st
 
-st.set_page_config(page_title="Tipp Generator", layout="centered")
-st.title("🎯 Tipp Generator")
+email = st.session_state.get("email")
+if not email:
+    st.warning("Bitte einloggen.")
+    st.stop()
 
-st.write("Hier kommt die Tipp-Generierung basierend auf deiner Strategie.")
+st.title("🎰 Tipp Generator")
+st.markdown("Hier kannst du deine Tipps basierend auf deiner Strategie generieren.")
+st.button("🌀 Tipps generieren")

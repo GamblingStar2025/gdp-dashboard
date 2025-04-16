@@ -1,7 +1,12 @@
-
 import streamlit as st
 
-st.set_page_config(page_title="MainApp", layout="centered")
-st.title("🏠 Hauptbereich der App")
+email = st.session_state.get("email")
+if not email:
+    st.warning("Bitte logge dich zuerst ein.")
+    st.stop()
 
-st.write("Willkommen zur Hauptansicht der App.")
+st.title("🎯 EuroGenius Hauptbereich")
+st.markdown(f"✅ Eingeloggt als **{email}**")
+
+st.page_link("pages/Strategie.py", label="📊 Strategie wählen")
+st.page_link("pages/TippGenerator.py", label="🎰 Tipp Generator")
