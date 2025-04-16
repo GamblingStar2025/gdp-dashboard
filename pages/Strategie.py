@@ -21,4 +21,5 @@ ki_intensity = st.slider("KI-Strategie Intensität", 0, 300, 120)
 
 if st.button("💾 Strategie speichern"):
     st.success("Strategien gespeichert (Simuliert)")
-    st.page_link("/pages/TippGenerator.py", label="➡️ Weiter zum Tipp Generator")
+    st.page_link("pages/TippGenerator.py", label="➡️ Weiter zum Tipp Generator")
+
